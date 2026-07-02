@@ -1,0 +1,16 @@
+SQL injection UNION attack, determining the number of columns returned by the query
+
+
+Kategori: SQL Injection
+Seviye: Apprentice
+Link: Lab
+
+
+Zafiyet Ne?
+Zafiyet aynı, sorgu parametresinin komut satırı olarak algılayabilmesi bir zafiyete dönüşebilir ki öyle. 
+Burada başta girilen parametre örneğin gift bunun kaç sütundan olduğunu bilmiyoruz. Öğrenmek için 
+' UNION SELECT NULL yazarsın NULL sayısı sütun sayısı kadar olmalı eğer geçerse hata verir. Bu zafiyet 
+kötüye kullanılabilir. Devam edip birkaç bilgi daha çekilir ve sisteme girilir.
+
+Bilgiler:
+SQL'de UNION iki sorgunun sonucunu birleştirip tek tablo olarak gösterir. 
