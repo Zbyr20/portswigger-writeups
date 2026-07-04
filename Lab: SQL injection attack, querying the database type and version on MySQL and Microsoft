@@ -1,0 +1,9 @@
+Lab: SQL injection attack, querying the database type and version on MySQL and Microsoft
+
+Kategori: SQL Injection
+Seviye: Apprentice
+
+Açıklama: Veri tabanın türü ve hangi veritabanı olduğunu bu sorguyla öğren.
+'+UNION+SELECT+@@version,+NULL#
+
+bunda da diğer her şey geçerli, UNION kullanarak öğreniyoruz.
