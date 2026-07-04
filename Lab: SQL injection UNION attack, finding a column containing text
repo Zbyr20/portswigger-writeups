@@ -1,1 +1,10 @@
 Lab: SQL injection UNION attack, finding a column containing text
+Kategori: SQL Injection
+Seviye: Apprentice
+
+Açıklama: Sql sorgusuna başka bir sorgu eklemek için UNION kullanırız. Bir tabloyu veya sadece bir bilgiyi öğrenmek için UNION SELECT .. kullanabiliriz.
+Burada tek sorun bu sorgu ilk sorgudaki tablonun sütun sayısı kadar sütun içermeli ve sütun ve satır yani veri türleri birbiri ile uygun olmalı.
+Peki her verinin yerine ne geçebilir ki biz sütun sayısını öğrenelim ve deneyerek veri türünü de öğrenelim. NULL her veri türünün varsayılanıdır sql de.
+
+request:
+'UNION SELECT NULL, NULL--
